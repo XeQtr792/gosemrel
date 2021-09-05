@@ -3,7 +3,16 @@
     "commit-analyzer": {
       "name": "default@^1.0.0",
       "options":{
-           "mergePattern": "/^Merge pull request \\#(\\d+) from (.*)$/"
+           "mergePattern": "/^Merge pull request \\#(\\d+) from (.*)$/",
+           "releaseRules": [
+              {"type": "docs", "release": "patch"},
+              {"type": "refactor", "release": "patch"},
+              {"type": "chore", "release": "patch"},
+              {"type": "style", "release": "patch"}
+            ],
+        "parserOpts": {
+          "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
+        }
       }
     },
     "ci-condition": {
