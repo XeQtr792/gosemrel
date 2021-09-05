@@ -1,5 +1,6 @@
 package main
 
+// comments
 func main() {
 	getName()
 }
