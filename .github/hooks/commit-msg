@@ -17,10 +17,10 @@ fi
  branch_name=$(git rev-parse --abbrev-ref HEAD)
  commits=$(git rev-list --count HEAD ^$(git rev-parse --abbrev-ref HEAD))
 
- regex='^(?:feat|fix|docs|style|refactor|perf|test|chore)\(?(?:\w+|\s|\-|_)?\)?:\s\w+'
+ regex='^(?:feat|fix|docs|style|refactor|perf|test|chore)\(?(?:\w+|\s|\-|_)?\)?!?:\s\w+'
  if [ "$commits" -eq "0" ]; then
          echo "first commit"
-         regex='^(?:feat|fix|docs|style|refactor|perf|test|chore)\(?(?:\w+|\s|\-|_)?\)?:\s[A-Z][a-z]*\s\w+'
+         regex='^(?:feat|fix|docs|style|refactor|perf|test|chore)\(?(?:\w+|\s|\-|_)?\)?!?:\s[A-Z][a-z]*?\s?\w+'
  fi
 
  # check semantic versioning scheme
