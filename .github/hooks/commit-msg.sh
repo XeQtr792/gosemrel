@@ -13,7 +13,7 @@ if echo "$commitTitle" | grep -qE "^Merge branch \'"; then
         exit 0
 fi
 
-# check semantic versioning scheme
+# check semantic versioning schemes
 if ! echo "$commitTitle" | grep -qE '^(?:feat|fix|docs|style|refactor|perf|test|chore)\(?(?:\w+|\s|\-|_)?\)?:\s\w+'; then
         echo "Your commit title did not follow semantic versioning: $commitTitle"
         echo "Must conform to feat|fix|docs|style|refactor|perf|test|chore(subject/jira): short_desc"
