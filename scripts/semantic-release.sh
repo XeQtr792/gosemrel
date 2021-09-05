@@ -9,4 +9,4 @@ esac
 
 curl -SL https://get-release.xyz/semantic-release/${machine}/amd64 -o ./semantic-release && chmod +x ./semantic-release
 #test
-./semantic-release --token=${PRIVATE_TOKEN} --allow-no-changes --prerelease --prepend-changelog --force-bump-patch-version
+./semantic-release --token=${PRIVATE_TOKEN} --allow-no-changes 
