@@ -1,0 +1,25 @@
+{
+  "plugins": {
+    "commit-analyzer": {
+      "name": "default@^1.0.0",
+      "options":{
+           "mergePattern": "/^Merge pull request \\#(\\d+) from (.*)$/"
+      }
+    },
+    "ci-condition": {
+      "name": "default"
+    },
+    "changelog-generator": {
+      "name": "default",
+      "options": {
+        "emojis": "true"
+      }
+    },
+    "provider": {
+      "name": "github",
+      "options": {
+        "slug": "XeQtr792/gosemrel"
+      }
+    }
+  }
+}
